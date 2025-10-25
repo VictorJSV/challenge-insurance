@@ -35,7 +35,8 @@ module.exports = {
         'F9':'#F9F9F9',
         'EF': '#EFEFEF',
         'red-500': '#D01443',
-        'muted': '#BDBDBD'
+        'muted': '#BDBDBD',
+        'yellow-500': '#F3CD03'
       },
       boxShadow: {
         'header-band': 'inset 0px 9px 6px -4px rgba(208, 20, 67, 0.14)',

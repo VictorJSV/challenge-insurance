@@ -41,7 +41,7 @@ export const OpinionsSection = () => {
               <div className="p-5 shadow-md h-full border border-EF rounded-lg flex flex-col">
                 <div className="flex gap-2 mb-[10px]">
                   {new Array(5).fill('').map((_, j) => (
-                    <div key={j}>{j + 1 <= item.rating ? <IconOutlinedStar /> : <IconFilledStar />}</div>
+                    <div key={j}>{j + 1 <= item.rating ? <IconFilledStar className='text-yellow-500' /> : <IconOutlinedStar />}</div>
                   ))}
                 </div>
                 <p className='grow'>"{item.description}"</p>
