@@ -10,8 +10,8 @@ export const HeaderLogin = () => {
         First time here? You can register to save Quotes and Applications{' '}
       </p>
       <div className="c-header-login__buttons">
-        <Button variant="filled">Register</Button>
-        <Button variant="outlined">Login</Button>
+        <Button variant="filled" size='md'>Register</Button>
+        <Button variant="outlined" size='md'>Login</Button>
       </div>
     </div>
   );

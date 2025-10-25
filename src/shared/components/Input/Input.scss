@@ -1,3 +1,8 @@
 .c-input {
-  
+  &__label {
+    @apply font-semibold text-red-500 mb-[10px] block;
+  }
+  &__field {
+    @apply border border-muted bg-F9 px-[21px] py-[11px] leading-7 rounded-[5px] w-full;
+  }
 }

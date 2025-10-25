@@ -5,22 +5,21 @@ import { classes } from '@src/shared/utils';
 interface InputProps extends Omit<React.InputHTMLAttributes<HTMLInputElement>, 'type' | 'className'> {
   type?: 'text' | 'number';
   variant?: 'default' | 'outlined';
-  alignToLeft?: boolean;
   label?: string;
   isError?: boolean;
-  id: string;
 }
 
 const Input = forwardRef<HTMLInputElement, InputProps>(
-  ({ type = 'text', label, isError, alignToLeft, variant = 'default', ...props }, ref) => {
+  ({ type = 'text', label, isError, variant = 'default', ...props }, ref) => {
     return (
       <label
-        className={classes('c-input', alignToLeft && 'c-input--to-left', variant && `c-input--variant-${variant}`)}
-        htmlFor={props.id}
+        className={classes('c-input', variant && `c-input--variant-${variant}`)}
+        htmlFor={props.id || props.name}
       >
         {label && (
           <span className="c-input__label">
             {label}
+            {props.required && <span aria-hidden="true"> *</span>}
           </span>
         )}
         <input
@@ -28,6 +27,7 @@ const Input = forwardRef<HTMLInputElement, InputProps>(
           ref={ref}
           type={type}
           aria-invalid={isError}
+          id={props.id || props.name}
           {...props}
         />
       </label>
