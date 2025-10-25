@@ -21,9 +21,7 @@ const Layout: React.FC<PropsWithChildren<{}>> = ({ children }) => {
   return (
   <div className="c-layout">
     <header className="c-layout__header">
-      <Container>
-        <Header listMenu={listMenu} />
-      </Container>
+      <Header listMenu={listMenu} />
     </header>
     <main className="c-layout__main">{children}</main>
     <footer className="c-layout__footer">

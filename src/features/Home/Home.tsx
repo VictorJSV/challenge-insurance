@@ -12,7 +12,7 @@ import Button from '@src/shared/components/Button/Button';
 
 export const Home = () => {
   return (
-    <>
+    <div className='overflow-hidden'>
       <Container>
         <div className="relative">
           <div className="flex mt-4 md:mt-[38px] pb-[55px] md:h-[480px] justify-between flex-col md:items-end md:flex-row">
@@ -61,6 +61,6 @@ export const Home = () => {
       </Container>
       <UbigeoSection />
       <BookSection />
-    </>
+    </div>
   );
 };
