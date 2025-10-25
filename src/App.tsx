@@ -2,8 +2,9 @@ import React, { Suspense } from 'react';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Layout from './features/layout/Layout';
 import Container from './shared/components/Container/Container';
+import { Home } from './features/Home/Home';
 
-/* const Plans = React.lazy(() => import('./features/plans/Plans')); */
+/* const Demo = React.lazy(() => import('./features/...')); */
 
 const Loading = () => (
   <Container>
@@ -18,7 +19,7 @@ export default function App() {
         <Suspense fallback={<Loading />}>
           <Routes>
             <Route path="*" element={<>NOT FOUND</>} />
-            {/* <Route path="/" element={<Quote />} /> */}
+            <Route path="/" element={<Home />} />
           </Routes>
         </Suspense>
       </Layout>
