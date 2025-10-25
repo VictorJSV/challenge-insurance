@@ -1,0 +1,15 @@
+.c-search-section {
+  @apply bg-red-500;
+  .c-input-search {
+    @apply md:py-[20px];
+  }
+  &__container {
+    @apply max-w-[563px] mx-auto md:pt-[55px] md:pb-[60px] py-8;
+  }
+  &__title {
+    @apply text-white font-medium	text-2xl md:text-center mb-[26px];
+  }
+  &__button-container {
+    @apply mt-[26px] text-center;
+  }
+}

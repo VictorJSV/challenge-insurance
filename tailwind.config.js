@@ -33,6 +33,7 @@ module.exports = {
         'neutral-500': '#161616',
         'E6': '#E6E6E6',
         'F9':'#F9F9F9',
+        'EF': '#EFEFEF',
         'red-500': '#D01443',
         'muted': '#BDBDBD'
       },

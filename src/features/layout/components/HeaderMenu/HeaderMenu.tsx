@@ -12,8 +12,8 @@ export const HeaderMenu = ({ listMenu }: HeaderMenuProps) => {
     <div className="c-header-menu">
       <div className="c-header-menu__vignette"></div>
       <ul className="c-header-menu__list">
-        {listMenu.map((item) => (
-          <li className="c-header-menu__list-item">
+        {listMenu.map((item, index) => (
+          <li key={index} className="c-header-menu__list-item">
             {item.icon}
             <Link className="flex items-center gap-1" to={{ pathname: item.pathName }}>
               {item.text}
