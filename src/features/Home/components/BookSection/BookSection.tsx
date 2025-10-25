@@ -1,6 +1,8 @@
 import Container from '@src/shared/components/Container/Container';
 import ImgFamilyMobile from '@src/assets/images/family-mobile-cover.jpg';
+import ImgFamilyMobileWebp from '@src/assets/images/family-mobile-cover.webp';
 import ImgFamily from '@src/assets/images/family-cover.jpg';
+import ImgFamilyWebp from '@src/assets/images/family-cover.webp';
 import { BookForm } from '../BookForm/BookForm';
 
 export const BookSection = () => {
@@ -12,6 +14,7 @@ export const BookSection = () => {
       >
         <div className="md:basis-[267px]">
           <picture>
+            <source srcSet={ImgFamilyMobileWebp} type="image/webp" />
             <img
               className="md:hidden"
               src={ImgFamilyMobile}
@@ -19,6 +22,7 @@ export const BookSection = () => {
             />
           </picture>
           <picture>
+            <source srcSet={ImgFamilyWebp} type="image/webp" />
             <img
               className="hidden md:block"
               src={ImgFamily}

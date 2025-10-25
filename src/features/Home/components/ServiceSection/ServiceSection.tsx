@@ -1,5 +1,6 @@
 import Button from '@src/shared/components/Button/Button';
 import ImgHappyFamily from '@src/assets/images/happy-family.jpg';
+import ImgHappyFamilyWeb from '@src/assets/images/happy-family.webp';
 
 export const ServiceSection = () => {
   return (
@@ -26,6 +27,7 @@ export const ServiceSection = () => {
         </div>
         <div className="md:mt-[-55px]">
           <picture>
+            <source srcSet={ImgHappyFamilyWeb} type="image/webp" />
             <img src={ImgHappyFamily} alt="Familia de 3 miembros que está feliz" />
           </picture>
         </div>

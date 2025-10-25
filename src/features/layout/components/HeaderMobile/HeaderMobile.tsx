@@ -5,6 +5,7 @@ import IconSandwich from '@src/assets/svgs/icon-sandwich.svg?react';
 import IconPersonFill from '@src/assets/svgs/icon-person-fill.svg?react';
 import IconCross from '@src/assets/svgs/icon-cross.svg?react';
 import LogoMobile from '@src/assets/images/logo-mobile.jpg';
+import LogoMobileWebp from '@src/assets/images/logo-mobile.webp';
 import IconSearch from '@src/assets/svgs/icon-search.svg?react';
 import { Link } from "react-router-dom";
 import { classes } from "@src/shared/utils";
@@ -39,6 +40,7 @@ export const HeaderMobile = ({ listMenu }: HeaderProps) => {
         </div>
         <Link aria-label="Volver al inicio" to={{ pathname: '/' }} replace>
           <picture>
+            <source srcSet={LogoMobileWebp} type="image/webp" />
             <img src={LogoMobile} alt="Logo K&K Insurance" />
           </picture>
         </Link>

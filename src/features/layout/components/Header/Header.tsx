@@ -1,5 +1,6 @@
 import './Header.scss';
 import Logo from '@src/assets/images/logo.jpg';
+import LogoWebp from '@src/assets/images/logo.webp';
 import IconDownArrow from '@src/assets/svgs/icon-down-arrow.svg?react';
 import { Link } from 'react-router-dom';
 import { classes } from '@src/shared/utils';
@@ -20,6 +21,7 @@ export const Header = ({ listMenu }: HeaderProps) => {
       <div className="hidden md:flex justify-between h-[110px] pt-4">
         <Link aria-label="Volver al inicio" to={{ pathname: '/' }} replace>
           <picture>
+            <source srcSet={LogoWebp} type="image/webp" />
             <img src={Logo} alt="Logo K&K Insurance" />
           </picture>
         </Link>

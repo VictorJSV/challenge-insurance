@@ -1,5 +1,6 @@
 import Container from '@src/shared/components/Container/Container';
 import ImgMap from '@src/assets/images/map.png';
+import ImgMapWeb from '@src/assets/images/map.webp';
 
 export const UbigeoSection = () => {
   return (
@@ -22,6 +23,7 @@ export const UbigeoSection = () => {
             </div>
             <div className="md:pt-7">
               <picture>
+                <source srcSet={ImgMapWeb} type="image/webp" />
                 <img
                   src={ImgMap}
                   width={415}
