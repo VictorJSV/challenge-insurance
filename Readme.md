@@ -1,5 +1,5 @@
 # Desafío
-Para este desafío he utilizado React, Typescript, Redux Toolkit Query, Jest con Testing Library, Sass y Tailwind. Además para realizar mock de los servicio se utilizó Mock Service Worker (MSW).
+Para este desafío he utilizado React, Typescript, Sass y Tailwind. 
 
 ## Inicializar el proyecto
 
