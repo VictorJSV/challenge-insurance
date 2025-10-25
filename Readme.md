@@ -12,3 +12,6 @@ npm run dev
 ```
 npm test
 ```
+
+## Ruta de acceso a la página
+https://victorjsv.github.io/challenge-insurance/

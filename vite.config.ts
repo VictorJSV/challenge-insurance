@@ -6,6 +6,7 @@ import imagemin from 'vite-plugin-imagemin';
 import { visualizer } from 'rollup-plugin-visualizer';
 
 export default defineConfig({
+  base: '/challenge-insurance',
   plugins: [
     react(),
     tsconfigPaths(),

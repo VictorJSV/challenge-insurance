@@ -27,7 +27,7 @@ export const Home = () => {
               </p>
               <Button variant="filled">Get a Quote</Button>
             </div>
-            <ul className="flex gap-2 md:gap-4 text-white justify-center bg-black-transparent p-1 text-[10px] mt-2 md:text-sm md:p-0 md:bg-transparent md:mt-[33px] md:text-neutral-300">
+            <ul className="flex gap-1 md:gap-4 text-white justify-center bg-black-transparent p-1 text-[10px] mt-2 md:text-sm md:p-0 md:bg-transparent md:mt-[33px] md:text-neutral-300">
               <li>
                 <b>Phone</b> 1-800-637-4757
               </li>
