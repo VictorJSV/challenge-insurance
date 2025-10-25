@@ -4,7 +4,7 @@
     @apply md:py-[20px];
   }
   &__container {
-    @apply max-w-[563px] mx-auto md:pt-[55px] md:pb-[60px] py-8;
+    @apply max-w-[563px] mx-auto md:pt-[55px] md:pb-[60px] py-8 px-5 md:px-0;
   }
   &__title {
     @apply text-white font-medium	text-2xl md:text-center mb-[26px];

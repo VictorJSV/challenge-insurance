@@ -5,10 +5,12 @@ import { UbigeoSection } from './components/UbigeoSection/UbigeoSection';
 import { SearchSection } from './components/SearchSection/SearchSection';
 import { ServiceSection } from './components/ServiceSection/ServiceSection';
 import { InsuranceListSection } from './components/InsuranceListSection/InsuranceListSection';
+import { RecomendationSection } from './components/RecomendationSection/RecomendationSection';
 
 export const Home = () => {
   return (
     <div>
+      <RecomendationSection />
       <Container>
         <InsuranceListSection />
       </Container>
