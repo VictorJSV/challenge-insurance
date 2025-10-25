@@ -1,0 +1,15 @@
+.c-book-form {
+  @apply flex flex-col gap-3 md:gap-[0.625rem];
+
+  &__field {
+    @apply block;
+  }
+
+  &__submit {
+    @apply mt-[2.5rem];
+  }
+
+  &__button {
+    @apply w-full;
+  }
+}

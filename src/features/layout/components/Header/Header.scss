@@ -1,17 +1,68 @@
 .c-header {
-  @apply relative;
+  @apply relative md:h-[6.875rem] h-[4.563rem];
+
+  &__container {
+    @apply fixed w-full md:h-[6.875rem] h-[4.563rem] bg-white z-10 border-b shadow-md;
+    .c-container__inner {
+      @apply relative;
+    }
+  }
+
+  &__nav {
+    @apply hidden md:flex justify-between h-[6.875rem] pt-4;
+  }
+
+  &__logo {
+    @apply block;
+  }
+
+  &__center {
+    @apply basis-[31.9375rem];
+  }
+
+  &__menu {
+    @apply pt-[1.25rem] flex gap-6;
+  }
+
+  &__menu-item {
+    @apply block;
+  }
+
+  &__menu-item--special {
+    @apply mr-[4.8125rem];
+  }
+
+  &__menu-link {
+    @apply flex items-center gap-1;
+  }
+
+  &__actions {
+    @apply basis-[10rem] text-end;
+  }
+
+  &__slogan {
+    @apply text-red-500 text-start pt-3 pb-4 font-medium;
+  }
+
+  &__register-btn {
+    &--active {
+      @apply text-red-500;
+    }
+  }
+
+  &__login-btn {
+    @apply text-inherit;
+  }
+
+  &__dropdown {
+    @apply absolute z-10 py-3 px-6 bg-white w-[14.0625rem] border border-C4 -right-6 hidden md:block;
+  }
+
+  &__dropdown-text {
+    @apply text-xs mb-2;
+  }
+
   &__vignette {
-    @apply
-      w-[20px]
-      h-[20px]
-      top-[-11px]
-      -rotate-45
-      bg-white
-      absolute
-      left-[104px]
-      border-t
-      border-r
-      border-C4
-    ;
+    @apply w-[1.25rem] h-[1.25rem] top-[-0.6875rem] -rotate-45 bg-white absolute left-[6.5rem] border-t border-r border-C4;
   }
 }

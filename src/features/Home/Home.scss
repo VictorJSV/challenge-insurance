@@ -1,0 +1,43 @@
+.c-home {
+  @apply overflow-hidden;
+
+  &__hero {
+    @apply relative;
+  }
+
+  &__content {
+    @apply flex mt-4 md:mt-[2.375rem] pb-[3.4375rem] md:h-[30rem] justify-between flex-col md:items-end md:flex-row;
+  }
+
+  &__text {
+    @apply max-w-[14.6875rem] md:max-w-[32.4019rem] md:mb-16;
+  }
+
+  &__title {
+    @apply font-black text-2xl md:text-6.5xl text-red-500 mb-[1.875rem] pl-2 md:pl-0;
+  }
+
+  &__description {
+    @apply mb-[0.9375rem] max-w-[20.9375rem] text-base text-white bg-black-transparent p-2 rounded md:p-0 md:bg-transparent md:text-neutral-300 leading-none;
+  }
+
+  &__button {
+    @apply block;
+  }
+
+  &__contact {
+    @apply flex gap-1 md:gap-4 text-white justify-center bg-black-transparent p-1 text-[0.625rem] mt-2 md:text-sm md:p-0 md:bg-transparent md:mt-[2.0625rem] md:text-neutral-300;
+  }
+
+  &__contact-item {
+    @apply block;
+  }
+
+  &__image {
+    @apply block;
+  }
+
+  &__bg-image {
+    @apply absolute -top-4 -z-10 max-w-fit w-[34.375rem] scale-x-[-1] left-[-5.625rem] md:left-auto md:scale-x-[1] md:top-0 md:w-auto md:right-[-2.75rem];
+  }
+}

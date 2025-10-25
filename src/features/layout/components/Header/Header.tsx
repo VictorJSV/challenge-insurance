@@ -18,45 +18,47 @@ interface HeaderProps {
 export const Header = ({ listMenu }: HeaderProps) => {
   const [isOpenLogin, setisOpenLogin] = useState(false);
   return (
-    <div className="c-header md:h-[110px] h-[4.563rem]">
-      <div className="fixed w-full md:h-[110px] h-[4.563rem] bg-white z-10 border-b shadow-md">
+    <div className="c-header">
+      <div className="c-header__container">
         <Container>
-          <div className="hidden md:flex justify-between h-[110px] pt-4">
-            <Link aria-label="Volver al inicio" to={{ pathname: '/' }} replace>
+          <div className="c-header__nav">
+            <Link aria-label="Volver al inicio" to={{ pathname: '/' }} replace className="c-header__logo">
               <picture>
                 <source srcSet={LogoWebp} type="image/webp" />
                 <img src={Logo} alt="Logo K&K Insurance" />
               </picture>
             </Link>
-            <div className="basis-[511px]">
+            <div className="c-header__center">
               <InputSearch />
-              <ul className="pt-[20px] flex gap-6">
-                {listMenu.map((item, index) => (
-                  <li key={index} className={classes(index === 2 && 'mr-[77px]')}>
-                    <Link to={{ pathname: item.pathName }} className="flex items-center gap-1">
-                      {item.text}
-                      {item.subMenu && <IconDownArrow />}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
+              <nav>
+                <ul className="c-header__menu">
+                  {listMenu.map((item, index) => (
+                    <li key={index} className={classes('c-header__menu-item', index === 2 && 'c-header__menu-item--special')}>
+                      <Link to={{ pathname: item.pathName }} className="c-header__menu-link">
+                        {item.text}
+                        {item.subMenu && <IconDownArrow />}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </nav>
             </div>
-            <div className="basis-[160px] text-end">
-              <p className="text-red-500 text-start pt-3 pb-4 font-medium">We Take Fun Seriously</p>
+            <div className="c-header__actions">
+              <p className="c-header__slogan">We Take Fun Seriously</p>
               <Button
                 variant="text"
-                className={classes(isOpenLogin && 'text-red-500')}
+                className={classes('c-header__register-btn', isOpenLogin && 'c-header__register-btn--active')}
                 onClick={() => setisOpenLogin(!isOpenLogin)}
               >
                 Register
               </Button>
-              <Button variant="text">Login</Button>
+              <Button variant="text" className="c-header__login-btn">Login</Button>
             </div>
           </div>
           {isOpenLogin && (
-            <div className="absolute z-10 py-3 px-6 bg-white w-[225px] border border-C4 -right-6 hidden md:block">
+            <div className="c-header__dropdown">
               <div className="c-header__vignette" />
-              <p className="text-xs	mb-2">
+              <p className="c-header__dropdown-text">
                 First time here? You can register to save Quotes and Applications
               </p>
               <Button variant="outlined">Register</Button>

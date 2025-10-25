@@ -1,0 +1,27 @@
+.c-ubigeo {
+  @apply bg-red-500;
+
+  &__content {
+    @apply flex py-[7.8125rem] flex-col md:flex-row md:py-[6.25rem] md:h-[50.4375rem] md:justify-between;
+  }
+
+  &__text {
+    @apply text-white md:basis-[25.5rem];
+  }
+
+  &__title {
+    @apply text-4.5xl font-bold mb-[0.9375rem];
+  }
+
+  &__description {
+    @apply mb-[7.5rem] md:ml-3;
+  }
+
+  &__image {
+    @apply md:pt-7;
+  }
+
+  &__map {
+    @apply w-[19.5625rem] md:w-auto mx-auto;
+  }
+}

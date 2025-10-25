@@ -1,0 +1,31 @@
+.c-service {
+  @apply mt-6 mb-20 md:mt-[6.8125rem] md:mb-[8.3125rem];
+
+  &__title {
+    @apply text-red-500 text-2xl mb-[0.9375rem] text-center md:text-left;
+  }
+
+  &__content {
+    @apply flex justify-between flex-col md:flex-row;
+  }
+
+  &__text {
+    @apply max-w-[28.1875rem] text-base order-1 md:order-none;
+  }
+
+  &__highlight {
+    @apply font-bold mb-6 mt-5 md:mt-0;
+  }
+
+  &__description {
+    @apply mb-4;
+  }
+
+  &__button {
+    @apply max-w-44 w-full md:max-w-fit md:w-fit;
+  }
+
+  &__image {
+    @apply md:mt-[-3.4375rem];
+  }
+}

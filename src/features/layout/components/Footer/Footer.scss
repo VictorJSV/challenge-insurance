@@ -1,4 +1,64 @@
 .c-footer {
-  
+  @apply py-[1.125rem] text-white flex flex-col md:flex-row md:h-[28.5625rem] md:pt-6 mb-[3.5rem];
+
+  &__left {
+    @apply md:max-w-[23.125rem] mr-[3.4375rem] relative md:pt-[2.375rem] md:ml-[6rem];
+  }
+
+  &__contact-title {
+    @apply font-semibold text-lg pt-2 md:text-sm;
+  }
+
+  &__phone {
+    @apply text-base pt-2 md:pt-[0.9375rem] md:text-2xl;
+  }
+
+  &__info-line {
+    @apply leading-[182%] text-base;
+  }
+
+  &__info-line--with-margin {
+    @apply leading-[182%] text-base md:pt-1;
+  }
+
+  &__divider {
+    @apply my-[0.8125rem] md:mt-[1.4375rem] md:mb-[1.625rem];
+  }
+
+  &__notice-list {
+    @apply text-xs md:text-sm;
+  }
+
+  &__notice-item {
+    @apply pb-4;
+  }
+
+  &__line {
+    @apply w-[0.0625rem] h-[20rem] bg-white hidden md:block;
+  }
+
+  &__right {
+    @apply relative md:ml-[2.125rem] md:pt-[2.375rem];
+  }
+
+  &__divider--mobile {
+    @apply my-[0.8125rem] md:hidden;
+  }
+
+  &__social-container {
+    @apply flex gap-2 mt-2;
+  }
+
+  &__divider--desktop {
+    @apply my-[0.8125rem] md:max-w-[18.9375rem] md:mt-[3.475rem] md:mb-7;
+  }
+
+  &__copyright {
+    @apply mt-2 md:mt-5;
+  }
+
+  &__privacy-link {
+    @apply pt-[1.9375rem] md:pt-4 block underline;
+  }
 }
 

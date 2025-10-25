@@ -4,6 +4,7 @@ import IconFilledStar from '@src/assets/svgs/icon-filled-star.svg?react';
 import ImgPerson1 from '@src/assets/images/person1.jpg';
 import ImgPerson2 from '@src/assets/images/person2.jpg';
 import ImgPerson3 from '@src/assets/images/person3.jpg';
+import './OpinionsSection.scss';
 
 export const OpinionsSection = () => {
   const opinions = [
@@ -30,26 +31,28 @@ export const OpinionsSection = () => {
     },
   ];
   return (
-    <section aria-labelledby='opinionsSection'>
-      <h2 className="text-center text-red-500 font-medium	text-2xl mb-[61px]" id="opinionsSection">
+    <section className="c-opinions" aria-labelledby='opinionsSection'>
+      <h2 className="c-opinions__title" id="opinionsSection">
         What customers are saying
       </h2>
-      <div className="pb-[52px]">
-        <Carousel className="py-1 md:justify-center gap-4 md:gap-[47px]">
+      <div className="c-opinions__container">
+        <Carousel className="c-opinions__carousel">
           {opinions.map((item, index) => (
             <Carousel.Item key={index} index={index} width="275px">
-              <div className="p-5 shadow-md h-full border border-EF rounded-lg flex flex-col">
-                <div className="flex gap-2 mb-[10px]">
+              <div className="c-opinions__card">
+                <div className="c-opinions__rating">
                   {new Array(5).fill('').map((_, j) => (
-                    <div key={j}>{j + 1 <= item.rating ? <IconFilledStar className='text-yellow-500' /> : <IconOutlinedStar />}</div>
+                    <div key={j} className="c-opinions__star">
+                      {j + 1 <= item.rating ? <IconFilledStar className='c-opinions__star--filled' /> : <IconOutlinedStar />}
+                    </div>
                   ))}
                 </div>
-                <p className='grow'>"{item.description}"</p>
-                <div className="flex items-center gap-[10px] mt-[27px]">
-                  <div className='h-5 w-5 bg-slate-200 rounded-full	'>
+                <p className='c-opinions__description'>"{item.description}"</p>
+                <div className="c-opinions__author">
+                  <div className='c-opinions__avatar'>
                     <img src={item.img} alt="Perfil de persona" />
                   </div>
-                  <div>{item.name}</div>
+                  <div className="c-opinions__name">{item.name}</div>
                 </div>
               </div>
             </Carousel.Item>

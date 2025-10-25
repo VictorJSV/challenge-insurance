@@ -1,0 +1,47 @@
+.c-opinions {
+  @apply block;
+
+  &__title {
+    @apply text-center text-red-500 font-medium text-2xl mb-[3.8125rem];
+  }
+
+  &__container {
+    @apply pb-[3.25rem];
+  }
+
+  &__carousel {
+    @apply py-1 md:justify-center gap-4 md:gap-[2.9375rem];
+  }
+
+  &__card {
+    @apply p-5 shadow-md h-full border border-EF rounded-lg flex flex-col;
+  }
+
+  &__rating {
+    @apply flex gap-2 mb-[0.625rem];
+  }
+
+  &__star {
+    @apply block;
+
+    &--filled {
+      @apply text-yellow-500;
+    }
+  }
+
+  &__description {
+    @apply grow;
+  }
+
+  &__author {
+    @apply flex items-center gap-[0.625rem] mt-[1.6875rem];
+  }
+
+  &__avatar {
+    @apply h-5 w-5 bg-slate-200 rounded-full;
+  }
+
+  &__name {
+    @apply block;
+  }
+}

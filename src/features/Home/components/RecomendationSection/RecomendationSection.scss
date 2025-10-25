@@ -1,0 +1,15 @@
+.c-recommendation {
+  @apply bg-red-500 text-white;
+
+  &__content {
+    @apply my-11 md:my-[3.5625rem] max-w-[35rem] mx-auto text-center;
+  }
+
+  &__title {
+    @apply font-medium text-lg md:text-2xl mb-[0.9375rem];
+  }
+
+  &__description {
+    @apply mb-[0.9375rem];
+  }
+}

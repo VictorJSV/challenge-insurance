@@ -1,0 +1,35 @@
+.c-book-section {
+  @apply flex flex-col bg-white md:flex-row md:justify-between md:mx-auto max-w-[54.8125rem] md:mt-[-20.5rem];
+
+  &__image {
+    @apply md:basis-[16.6875rem];
+  }
+
+  &__img {
+    @apply block;
+
+    &--mobile {
+      @apply md:hidden;
+    }
+
+    &--desktop {
+      @apply hidden md:block;
+    }
+  }
+
+  &__content {
+    @apply px-7 md:grow md:py-10 md:px-[3.125rem];
+  }
+
+  &__title {
+    @apply text-red-500 font-bold;
+
+    &--mobile {
+      @apply text-4.5xl my-10 md:hidden;
+    }
+
+    &--desktop {
+      @apply text-2xl text-center pb-10 hidden md:block;
+    }
+  }
+}

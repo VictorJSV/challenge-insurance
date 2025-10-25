@@ -1,4 +1,5 @@
 .c-header-mobile {
+  @apply relative;
   &__inner {
     @apply h-[4.563rem] pt-[22px] flex items-start justify-between md:hidden;
   }

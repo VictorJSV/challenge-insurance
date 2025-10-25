@@ -4,6 +4,7 @@ import IconFilledStar from '@src/assets/svgs/icon-filled-star.svg?react';
 import IconFilledPlane from '@src/assets/svgs/icon-plane.svg?react';
 import IconFilledHeart from '@src/assets/svgs/icon-heart.svg?react';
 import IconFilledCar from '@src/assets/svgs/icon-car.svg?react';
+import './InsuranceListSection.scss';
 
 export const InsuranceListSection = () => {
   const insurances = [
@@ -24,33 +25,33 @@ export const InsuranceListSection = () => {
     },
   ];
   return (
-    <section className="mx-auto mt-[47px] mb-16" aria-labelledby="insuranceListSection">
+    <section className="c-insurance-list" aria-labelledby="insuranceListSection">
       <h2
-        className="text-red-500 text-center text-2xl font-medium mb-[19px]"
+        className="c-insurance-list__title"
         id="insuranceListSection"
       >
         Find the ideal insurance for you
       </h2>
-      <Carousel className="py-1 md:justify-center gap-4 md:gap-[47px]">
+      <Carousel className="c-insurance-list__carousel">
         {insurances.map((item, index) => (
           <Carousel.Item key={index} index={index} width="245px">
-            <div className="flex flex-col">
-              <div className="p-5 shadow-md h-full border border-EF rounded-lg mb-[32px] text-center">
-                <div className="w-[140px] h-[140px] bg-red-500 mx-auto rounded-full mb-[10.47px] flex items-center justify-center">
+            <div className="c-insurance-list__item">
+              <div className="c-insurance-list__card">
+                <div className="c-insurance-list__icon">
                   {item.icon}
                 </div>
-                <h3 className="mb-[10.47px] text-xl font-medium">{item.title}</h3>
-                <ul className="text-neutral-300 inline-block min-w-28">
+                <h3 className="c-insurance-list__card-title">{item.title}</h3>
+                <ul className="c-insurance-list__features">
                   {item.lists.map((listItem) => (
-                    <li className="flex gap-2">
-                      <IconFilledStar className="text-red-500 scale-75" />
+                    <li className="c-insurance-list__feature">
+                      <IconFilledStar className="c-insurance-list__star" />
                       {listItem}
                     </li>
                   ))}
                 </ul>
               </div>
-              <div className="mx-[42px]">
-                <Button variant="filled" className="w-full">
+              <div className="c-insurance-list__button-container">
+                <Button variant="filled" className="c-insurance-list__button">
                   View Details
                 </Button>
               </div>
