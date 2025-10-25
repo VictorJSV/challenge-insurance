@@ -1,7 +1,17 @@
 .c-header-menu {
   @include dropdown;
+  @apply border-neutral-200 border-x border-b;
   &__vignette {
-    @apply w-[25px] h-[25px] top-[-11px] -rotate-45 bg-white absolute shadow-header-arrow left-[20px];
+    @apply
+      w-[25px]
+      h-[25px]
+      top-[-11px]
+      -rotate-45
+      bg-white
+      absolute
+      shadow-header-arrow
+      left-[20px]
+    ;
   }
   &__list {
     @apply flex flex-col gap-[25px] mb-[64px] text-neutral-300 font-medium;

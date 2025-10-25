@@ -1,5 +1,6 @@
 .c-header-login {
   @include dropdown;
+  @apply border-C4 border-x border-b;
   &__vignette {
     @apply w-[25px] h-[25px] top-[-11px] -rotate-45 bg-white absolute shadow-header-arrow right-[26px];
   }

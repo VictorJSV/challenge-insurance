@@ -25,6 +25,7 @@ module.exports = {
     extend: {
       fontSize: {
         '4.5xl': ['2.5rem', '3.563rem'], //40px
+        '6.5xl': ['4rem', '100%'], //64px
       },
       colors: {
         'neutral-100': '#F1F1F1',
@@ -34,6 +35,7 @@ module.exports = {
         'E6': '#E6E6E6',
         'F9':'#F9F9F9',
         'EF': '#EFEFEF',
+        'C4': '#C4C4C4',
         'red-500': '#D01443',
         'muted': '#BDBDBD',
         'yellow-500': '#F3CD03'
@@ -42,6 +44,9 @@ module.exports = {
         'header-band': 'inset 0px 9px 6px -4px rgba(208, 20, 67, 0.14)',
         'header-band-grey': 'inset 0px 9px 6px -4px rgba(60, 60, 60, 0.14)',
         'header-arrow': 'inset -4px 6px 4px 0px rgba(208, 20, 67, 0.14)',
+      },
+      backgroundColor: {
+        'black-transparent': 'rgb(66 66 66 / 33%)'
       }
     },
   },
