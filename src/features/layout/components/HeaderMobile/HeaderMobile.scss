@@ -1,0 +1,20 @@
+.c-header-mobile {
+  &__inner {
+    @apply h-[4.563rem] pt-[22px] flex items-start justify-between md:hidden;
+  }
+  &__inner-left {
+    @apply flex gap-4 pt-[6px];
+  }
+  &__button-login {
+    @apply p-[6px] bg-white rounded-full;
+    svg {
+      @apply text-red-500;
+    }
+    &--is-active {
+      @apply bg-red-500;
+      svg {
+        @apply text-white;
+      }
+    }
+  }
+}

@@ -1,0 +1,4 @@
+/* @tailwind components; */
+@mixin dropdown {
+  @apply absolute z-10 shadow-header-band w-[calc(100%+48px)] -left-6 px-6 pt-9 pb-[33px] bg-white;
+}

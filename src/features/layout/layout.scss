@@ -1,0 +1,9 @@
+.c-layout {
+  @apply flex flex-col justify-between min-h-screen text-sm;
+  &__main {
+    @apply flex-grow pb-28 relative shadow-header-band-grey;
+  }
+  &__footer {
+    @apply bg-red-500;
+  }
+}

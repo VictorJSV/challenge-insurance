@@ -1,0 +1,15 @@
+.c-header-login {
+  @include dropdown;
+  &__vignette {
+    @apply w-[25px] h-[25px] top-[-11px] -rotate-45 bg-white absolute shadow-header-arrow right-[26px];
+  }
+  &__title {
+    @apply text-2xl text-red-500 leading-none font-medium;
+  }
+  &__description {
+    @apply text-neutral-300 pt-1 pb-12;
+  }
+  &__buttons {
+    @apply flex gap-8 ml-[22px];
+  }
+}

@@ -1,0 +1,21 @@
+.c-header-menu {
+  @include dropdown;
+  &__vignette {
+    @apply w-[25px] h-[25px] top-[-11px] -rotate-45 bg-white absolute shadow-header-arrow left-[20px];
+  }
+  &__list {
+    @apply flex flex-col gap-[25px] mb-[64px] text-neutral-300 font-medium;
+  }
+  &__list-item {
+    @apply flex gap-[14px] items-center;
+  }
+  &__assitance {
+    @apply mb-[9px];
+  }
+  &__call {
+    @apply text-xl mb-[9px];
+  }
+  &__text {
+    @apply leading-[182%];
+  }
+}
