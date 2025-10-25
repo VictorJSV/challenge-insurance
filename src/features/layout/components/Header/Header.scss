@@ -1,3 +1,17 @@
 .c-header {
   @apply relative;
+  &__vignette {
+    @apply
+      w-[20px]
+      h-[20px]
+      top-[-11px]
+      -rotate-45
+      bg-white
+      absolute
+      left-[104px]
+      border-t
+      border-r
+      border-C4
+    ;
+  }
 }

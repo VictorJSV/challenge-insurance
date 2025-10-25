@@ -7,12 +7,14 @@ import { IListMenu } from '../../models';
 import Button from '@src/shared/components/Button/Button';
 import { HeaderMobile } from '../HeaderMobile/HeaderMobile';
 import { InputSearch } from '@src/shared/components/InputSearch/InputSearch';
+import { useState } from 'react';
 
 interface HeaderProps {
   listMenu: IListMenu[];
 }
 
 export const Header = ({ listMenu }: HeaderProps) => {
+  const [isOpenLogin, setisOpenLogin] = useState(false);
   return (
     <div className="c-header">
       <div className="hidden md:flex justify-between h-[110px] pt-4">
@@ -35,11 +37,27 @@ export const Header = ({ listMenu }: HeaderProps) => {
           </ul>
         </div>
         <div className="basis-[160px] text-end">
-          <p className="text-red-500 text-start pt-3 pb-4">We Take Fun Seriously</p>
-          <Button variant="text">Register</Button>
+          <p className="text-red-500 text-start pt-3 pb-4 font-medium">We Take Fun Seriously</p>
+          <Button
+            variant="text"
+            className={classes(isOpenLogin && 'text-red-500')}
+            onClick={() => setisOpenLogin(!isOpenLogin)}
+          >
+            Register
+          </Button>
           <Button variant="text">Login</Button>
         </div>
       </div>
+      {isOpenLogin && (
+        <div className="absolute z-10 py-3 px-6 bg-white w-[225px] border border-C4 -right-6 hidden md:block">
+          <div className="c-header__vignette" />
+          <p className="text-xs	mb-2">
+            First time here? You can register to save Quotes and Applications
+          </p>
+          <Button variant="outlined">Register</Button>
+        </div>
+      )}
+
       <HeaderMobile listMenu={listMenu} />
     </div>
   );
