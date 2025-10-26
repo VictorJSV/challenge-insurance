@@ -42,8 +42,8 @@ export const InsuranceListSection = () => {
                 </div>
                 <h3 className="c-insurance-list__card-title">{item.title}</h3>
                 <ul className="c-insurance-list__features">
-                  {item.lists.map((listItem) => (
-                    <li className="c-insurance-list__feature">
+                  {item.lists.map((listItem, j) => (
+                    <li key={j} className="c-insurance-list__feature">
                       <IconFilledStar className="c-insurance-list__star" />
                       {listItem}
                     </li>

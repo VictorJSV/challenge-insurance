@@ -27,15 +27,15 @@ const Select = forwardRef<HTMLSelectElement, SelectProps>(
     const selectRef = useRef<HTMLSelectElement>(null);
     const value = selectRef.current?.value;
     const [isOpen, setIsOpen] = useState<boolean>(false);
-    const [currentValue, setCurrentValue] = useState<Option>({ label: 'Seleccione...', value: '' });
+    const [currentValue, setCurrentValue] = useState<Option>({ label: '', value: value || '' });
 
     useImperativeHandle(ref, () => selectRef.current || ({} as HTMLSelectElement));
     useClickOutside(wrapperRef, () => setIsOpen(false), isOpen);
 
     useEffect(() => {
-      const selectedOption = options.find((opt) => opt.value === value);
+      const selectedOption = options.find((opt) => String(opt.value) === String(value));
       setCurrentValue(selectedOption || { label: 'Please Select', value: '' });
-    }, [value, options]);
+    }, [value]);
 
     const handleToggle = () => {
       if (!disabled) {
